@@ -1,0 +1,26 @@
+@url = http://localhost:3000
+
+//**************customer*********
+
+// get all customers
+GET {{url}}/api/customers HTTP/1.1
+
+####
+
+// get customer by id
+GET {{url}}/api/customers/0 HTTP/1.1
+
+###
+
+// create customer
+POST {{url}}/api/customers HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "customer2",
+    "lastName": "ccc",
+    "email": "ccds@asas.com",
+    "phone": "22222222222"
+}
+
+###

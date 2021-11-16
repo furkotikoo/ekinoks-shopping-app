@@ -1,0 +1,29 @@
+@url = http://localhost:3000
+
+//**************order*************
+
+// get all orders list
+GET {{url}}/api/orders HTTP/1.1
+
+###
+
+// get order by id 
+GET {{url}}/api/orders/1 HTTP/1.1
+
+###
+
+// get customer orders
+GET {{url}}/api/customers/2/orders HTTP/1.1
+
+###
+
+// create order
+POST {{url}}/api/orders HTTP/1.1
+content-type: application/json
+
+{
+    "customerId" : "1",
+    "productsIds" : [1]
+}
+
+###

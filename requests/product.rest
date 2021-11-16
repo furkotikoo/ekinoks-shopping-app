@@ -1,0 +1,37 @@
+@url = http://localhost:3000
+
+//**************product***********
+
+// get all products
+GET {{url}}/api/products HTTP/1.1
+
+###
+
+// get prdouct by id
+GET {{url}}/api/products/1 HTTP/1.1
+
+###
+
+// create product
+POST {{url}}/api/products HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "productRESTPOST",
+    "price": "0",
+    "description": "this product created from REST CLIENT request"
+}
+
+###
+
+// update product
+PUT {{url}}/api/products/3 HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "productRESTPUT",
+    "price": "nu2ll",
+    "description": "this product updated from REST CLIENT request"
+}
+
+###
